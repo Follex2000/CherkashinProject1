@@ -1,5 +1,4 @@
-﻿using CherkashinProject.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +16,11 @@ using System.Windows.Shapes;
 namespace CherkashinProject.Pages
 {
     /// <summary>
-    /// Interaction logic for PageAddTovar.xaml
+    /// Interaction logic for PagePrihodnaya.xaml
     /// </summary>
-    public partial class PageAddTovar : Page
+    public partial class PagePrihodnaya : Page
     {
-        Tovares _ct = null;
-        public PageAddTovar(Tovares currentTovar)
-        {
-            InitializeComponent();
-            _ct = currentTovar;
-        }
-
-        public PageAddTovar()
+        public PagePrihodnaya()
         {
             InitializeComponent();
         }

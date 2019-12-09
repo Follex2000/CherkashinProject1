@@ -100,8 +100,11 @@
     <Compile Include="Entity\Users.cs">
       <DependentUpon>Model_LineCore.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PageAddTovar.xaml.cs">
-      <DependentUpon>PageAddTovar.xaml</DependentUpon>
+    <Compile Include="Pages\PagePrihodnaya.xaml.cs">
+      <DependentUpon>PagePrihodnaya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageRashodnaya.xaml.cs">
+      <DependentUpon>PageRashodnaya.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowAddEdit.xaml.cs">
       <DependentUpon>WindowAddEdit.xaml</DependentUpon>
@@ -127,10 +130,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageAddTovar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\PageAllTovar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,6 +139,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageGetTovar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagePrihodnaya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageRashodnaya.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
