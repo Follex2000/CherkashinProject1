@@ -1,0 +1,31 @@
+﻿<Window x:Class="CherkashinProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:props="clr-namespace:CherkashinProject.Properties"
+        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="Assets/linecore.png" HorizontalAlignment="Left" Margin="15" ></Image>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Лайнкор" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Name="BlockHeader"></TextBlock>
+        </StackPanel>
+                <Button Visibility="Hidden" HorizontalAlignment="Right" Margin="10" Content="Back" Name="Btn_Back" Click="Btn_Back_Click"></Button>
+        <Frame Grid.Row="1" ContentRendered="MainFrame_ContentRendered" Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <TextBlock Text="{x:Static props:Resources.TextLang}" Width="Auto" Style="{StaticResource CommonBlock}"></TextBlock>
+            <ComboBox Name="ComboLang" SelectedIndex="0">
+                <ComboBoxItem>Русский</ComboBoxItem>
+                <ComboBoxItem>English</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="BtnApply" Click="BtnApply_Click" Content="{x:Static props:Resources.ActionApply}"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

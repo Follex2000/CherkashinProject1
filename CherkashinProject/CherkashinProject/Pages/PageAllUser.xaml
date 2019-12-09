@@ -1,0 +1,37 @@
+﻿<Page x:Class="CherkashinProject.Pages.PageAllUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CherkashinProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      xmlns:props="clr-namespace:CherkashinProject.Properties"
+      Title="PageAllUser">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{x:Static props:Resources.TextSearchByName}" Style="{StaticResource TextBlockText}"/>
+                <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{x:Static props:Resources.TextFilterByRole}" Style="{StaticResource TextBlockText}"/>
+                <ComboBox Name="CBxSearch" DisplayMemberPath="RoleName" SelectionChanged="CBxSearch_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Name="TbNothing" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="Никого не найдено!" Foreground="#E54128"></TextBlock>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10" RowBackground="White" Name="DataGridAllUser">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static props:Resources.UsersId}" Width="*" Binding="{Binding UserId}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.UsersLogin}" Width="*" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.UserRole}" Width="*" Binding="{Binding Role.RoleName}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.UserName}" Width="*" Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

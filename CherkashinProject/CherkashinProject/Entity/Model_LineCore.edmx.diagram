@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2102ff3ea9c442d8a10fe77235ad1d9" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="linecoreBaseModel.Country" Width="1.5" PointX="0.75" PointY="4.375" />
+        <EntityTypeShape EntityType="linecoreBaseModel.GetTovara" Width="1.5" PointX="5.25" PointY="3.875" />
+        <EntityTypeShape EntityType="linecoreBaseModel.Kontragent" Width="1.5" PointX="6" PointY="1.375" />
+        <EntityTypeShape EntityType="linecoreBaseModel.PostTovara" Width="1.5" PointX="8.25" PointY="3.875" />
+        <EntityTypeShape EntityType="linecoreBaseModel.Role" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="linecoreBaseModel.Sklad" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="linecoreBaseModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="linecoreBaseModel.TovarColor" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="linecoreBaseModel.Tovares" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="linecoreBaseModel.Users" Width="1.5" PointX="3" PointY="8.125" />
+        <AssociationConnector Association="linecoreBaseModel.FK_Tovares_Country" />
+        <AssociationConnector Association="linecoreBaseModel.FK_GetTovara_Sklad" />
+        <AssociationConnector Association="linecoreBaseModel.FK_GetTovara_Tovares" />
+        <AssociationConnector Association="linecoreBaseModel.FK_GetTovara_Users" />
+        <AssociationConnector Association="linecoreBaseModel.FK_PostTovara_Kontragent" />
+        <AssociationConnector Association="linecoreBaseModel.FK_PostTovara_Tovares" />
+        <AssociationConnector Association="linecoreBaseModel.FK_PostTovara_Users" />
+        <AssociationConnector Association="linecoreBaseModel.FK_Users_Role" />
+        <AssociationConnector Association="linecoreBaseModel.FK_Tovares_TovarColor" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
