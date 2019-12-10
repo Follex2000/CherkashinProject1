@@ -18,8 +18,8 @@
         <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="BtnUsers" Click="ButtonUsers_Click" Content="{x:Static props:Resources.AllUsers}"></Button>
             <Button x:Name="BtnTovar" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
-            <Button Content="Приходная накладная"></Button>
-            <Button Content="Расходная накладная"></Button>
+            <Button x:Name="BtnPrihodnaya" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
+            <Button x:Name="BtnRashodnaya" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
         </StackPanel>
     </Grid>
 </Page>

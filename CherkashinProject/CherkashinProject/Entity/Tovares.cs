@@ -35,6 +35,8 @@ public partial class Tovares
 
     public int TovarArticle { get; set; }
 
+    public int Count { get; set; }
+
     public int ColorId { get; set; }
 
     public int TovarCountryId { get; set; }

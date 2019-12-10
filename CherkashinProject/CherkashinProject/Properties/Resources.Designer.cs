@@ -124,6 +124,213 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prihodnaya.
+        /// </summary>
+        public static string BtnPrihodnaya {
+            get {
+                return ResourceManager.GetString("BtnPrihodnaya", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rashodnaya.
+        /// </summary>
+        public static string BtnRashodnaya {
+            get {
+                return ResourceManager.GetString("BtnRashodnaya", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error!.
+        /// </summary>
+        public static string CaptionError {
+            get {
+                return ResourceManager.GetString("CaptionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add color.
+        /// </summary>
+        public static string CBxAddColor {
+            get {
+                return ResourceManager.GetString("CBxAddColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add country.
+        /// </summary>
+        public static string CBxAddCountry {
+            get {
+                return ResourceManager.GetString("CBxAddCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count.
+        /// </summary>
+        public static string DGCount {
+            get {
+                return ResourceManager.GetString("DGCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of get.
+        /// </summary>
+        public static string DGDateOfGet {
+            get {
+                return ResourceManager.GetString("DGDateOfGet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of sale.
+        /// </summary>
+        public static string DGDateOfSale {
+            get {
+                return ResourceManager.GetString("DGDateOfSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get ID.
+        /// </summary>
+        public static string DGGetId {
+            get {
+                return ResourceManager.GetString("DGGetId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kontragent.
+        /// </summary>
+        public static string DGKontragent {
+            get {
+                return ResourceManager.GetString("DGKontragent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manager.
+        /// </summary>
+        public static string DGManager {
+            get {
+                return ResourceManager.GetString("DGManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string DGPrice {
+            get {
+                return ResourceManager.GetString("DGPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sklad.
+        /// </summary>
+        public static string DGSklad {
+            get {
+                return ResourceManager.GetString("DGSklad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tovar.
+        /// </summary>
+        public static string DGTovar {
+            get {
+                return ResourceManager.GetString("DGTovar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color duplicates!.
+        /// </summary>
+        public static string ErrorAddColorDuplicates {
+            get {
+                return ResourceManager.GetString("ErrorAddColorDuplicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color cannot be empty!.
+        /// </summary>
+        public static string ErrorAddColorEmpty {
+            get {
+                return ResourceManager.GetString("ErrorAddColorEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country duplicates!.
+        /// </summary>
+        public static string ErrorAddCountryDuplicates {
+            get {
+                return ResourceManager.GetString("ErrorAddCountryDuplicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country cannot be empty!.
+        /// </summary>
+        public static string ErrorAddCountryEmpty {
+            get {
+                return ResourceManager.GetString("ErrorAddCountryEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You entered something wrong!.
+        /// </summary>
+        public static string ErrorSomethingWrong {
+            get {
+                return ResourceManager.GetString("ErrorSomethingWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unspecified error!.
+        /// </summary>
+        public static string ErrorUnspecified {
+            get {
+                return ResourceManager.GetString("ErrorUnspecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter by tovar :.
+        /// </summary>
+        public static string FilterByTovar {
+            get {
+                return ResourceManager.GetString("FilterByTovar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully added!.
+        /// </summary>
+        public static string MessageSuccessfullAdd {
+            get {
+                return ResourceManager.GetString("MessageSuccessfullAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully edited!.
+        /// </summary>
+        public static string MessageSuccessfullEdit {
+            get {
+                return ResourceManager.GetString("MessageSuccessfullEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number product.
         /// </summary>
         public static string NumberTovar {
@@ -165,6 +372,51 @@ namespace CherkashinProject.Properties {
         public static string ProductName {
             get {
                 return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by sklad or manger :.
+        /// </summary>
+        public static string SearchBySkladOrManager {
+            get {
+                return ResourceManager.GetString("SearchBySkladOrManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Article :.
+        /// </summary>
+        public static string TextArticle {
+            get {
+                return ResourceManager.GetString("TextArticle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color :.
+        /// </summary>
+        public static string TextColor {
+            get {
+                return ResourceManager.GetString("TextColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count :.
+        /// </summary>
+        public static string TextCount {
+            get {
+                return ResourceManager.GetString("TextCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country :.
+        /// </summary>
+        public static string TextCountry {
+            get {
+                return ResourceManager.GetString("TextCountry", resourceCulture);
             }
         }
         
@@ -246,6 +498,15 @@ namespace CherkashinProject.Properties {
         public static string TextSelect {
             get {
                 return ResourceManager.GetString("TextSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tovar name :.
+        /// </summary>
+        public static string TextTovarName {
+            get {
+                return ResourceManager.GetString("TextTovarName", resourceCulture);
             }
         }
         

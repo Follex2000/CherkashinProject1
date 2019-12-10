@@ -138,6 +138,39 @@
   <data name="BtnEdit" xml:space="preserve">
     <value>Изменить</value>
   </data>
+  <data name="BtnPrihodnaya" xml:space="preserve">
+    <value>Приходная</value>
+  </data>
+  <data name="BtnRashodnaya" xml:space="preserve">
+    <value>Расходная</value>
+  </data>
+  <data name="CaptionError" xml:space="preserve">
+    <value>Ошибка!</value>
+  </data>
+  <data name="DGDateOfGet" xml:space="preserve">
+    <value>Дата получения</value>
+  </data>
+  <data name="DGDateOfSale" xml:space="preserve">
+    <value>Дата продажи</value>
+  </data>
+  <data name="DGKontragent" xml:space="preserve">
+    <value>Покупатель</value>
+  </data>
+  <data name="ErrorSomethingWrong" xml:space="preserve">
+    <value>Вы что-то ввели не так!</value>
+  </data>
+  <data name="ErrorUnspecified" xml:space="preserve">
+    <value>Неопределенная ошибка!</value>
+  </data>
+  <data name="FilterByTovar" xml:space="preserve">
+    <value>Фильтрация по товару :</value>
+  </data>
+  <data name="MessageSuccessfullAdd" xml:space="preserve">
+    <value>Успешно добавлено!</value>
+  </data>
+  <data name="MessageSuccessfullEdit" xml:space="preserve">
+    <value>Успешно изменено!</value>
+  </data>
   <data name="NumberTovar" xml:space="preserve">
     <value>Номер товара</value>
   </data>
@@ -153,8 +186,26 @@
   <data name="ProductName" xml:space="preserve">
     <value>Наименование</value>
   </data>
+  <data name="SearchBySkladOrManager" xml:space="preserve">
+    <value>Поиск по складу или менеджеру :</value>
+  </data>
+  <data name="TextArticle" xml:space="preserve">
+    <value>Артикль :</value>
+  </data>
+  <data name="TextColor" xml:space="preserve">
+    <value>Цвет :</value>
+  </data>
+  <data name="TextCount" xml:space="preserve">
+    <value>Количество :</value>
+  </data>
+  <data name="TextCountry" xml:space="preserve">
+    <value>Страна :</value>
+  </data>
   <data name="TextFilterByCountry" xml:space="preserve">
     <value>Фильтрация по стране :</value>
+  </data>
+  <data name="TextFilterByRole" xml:space="preserve">
+    <value>Фильтрация по роли :</value>
   </data>
   <data name="TextLang" xml:space="preserve">
     <value>Выберете язык:</value>
@@ -173,6 +224,9 @@
   </data>
   <data name="TextSelect" xml:space="preserve">
     <value>Вы уверены?</value>
+  </data>
+  <data name="TextTovarName" xml:space="preserve">
+    <value>Наименование товара :</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>Имя</value>

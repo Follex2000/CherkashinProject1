@@ -68,7 +68,7 @@ namespace CherkashinProject.Pages
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите удалить этот отель?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Вы уверены, что хотите удалить этот товар?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 AppData.Context.Tovares.Remove(DataGridTovar.SelectedItem as Tovares);
                 AppData.Context.SaveChanges();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CherkashinProject.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,23 @@ namespace CherkashinProject.Pages
 
         private void CBxSearch_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            UpdateUsers();
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите удалить этого пользователя?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                AppData.Context.Users.Remove(DataGridAllUser.SelectedItem as Users);
+                AppData.Context.SaveChanges();
+            }
+            UpdateUsers();
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.WindowAddEdit = new WindowAddEdit(new PageAddUser(DataGridAllUser.SelectedItem as Users));
+            AppData.WindowAddEdit.ShowDialog();
             UpdateUsers();
         }
     }

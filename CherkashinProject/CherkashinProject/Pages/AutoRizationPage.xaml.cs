@@ -88,12 +88,32 @@ namespace CherkashinProject.Pages
             }
             else
             {
-                if (CurrentUser.RoleId == 0 && _capchaText == TBCapt.Text)
-                { 
-                    AppData.MainFrame.Navigate(new Pages.AdminPagesMenu());
-                } else if(CurrentUser.RoleId == 1)
+                if(_capchaText != TBCapt.Text)
                 {
-                    MessageBox.Show("Форма еще в разработке");
+                    MessageBox.Show("Неверный текст капчи!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    ImgCapcha.Source = Drawing(Convert.ToInt32(ImgCapcha.Width), Convert.ToInt32(ImgCapcha.Height));
+                    return;
+                }
+                AppData.currentUser = CurrentUser;
+                switch (CurrentUser.RoleId)
+                {
+                    case 0:
+                        {
+                            AppData.MainFrame.Navigate(new Pages.AdminPagesMenu());
+                            break;
+                        }
+                    case 1:
+                        {
+                            AppData.MainFrame.Navigate(new Pages.SellerPagesMenu());
+                            break;
+                        }
+                    case 2:
+                        {
+                            AppData.MainFrame.Navigate(new Pages.ManagerPagesMenu());
+                            break;
+                        }
+                    default:
+                        break;
                 }
             }
             ImgCapcha.Source = Drawing(Convert.ToInt32(ImgCapcha.Width), Convert.ToInt32(ImgCapcha.Height));

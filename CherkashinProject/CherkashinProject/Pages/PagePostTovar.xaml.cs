@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace CherkashinProject.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageGetTovar.xaml
+    /// Interaction logic for PagePostTovar.xaml
     /// </summary>
-    public partial class PageGetTovar : Page
+    public partial class PagePostTovar : Page
     {
-        public PageGetTovar()
+        public PagePostTovar()
         {
             InitializeComponent();
             var tovares = AppData.Context.Tovares.ToList();
@@ -31,10 +31,10 @@ namespace CherkashinProject.Pages
             });
             CBxSearch.ItemsSource = tovares;
             CBxSearch.SelectedIndex = 0;
-            UpdateGetTovares();
+            UpdatePostTovares();
         }
 
-        public void UpdateGetTovares()
+        public void UpdatePostTovares()
         {
             var getTovares = AppData.Context.GetTovara.ToList();
             if (CBxSearch.SelectedIndex > 0)
@@ -59,29 +59,29 @@ namespace CherkashinProject.Pages
 
         private void TBxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            UpdateGetTovares();
+            UpdatePostTovares();
         }
 
         private void CBxSearch_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            UpdateGetTovares();
+            UpdatePostTovares();
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите удалить эту приходную?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Вы уверены, что хотите удалить эту расходную?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 AppData.Context.GetTovara.Remove(DataGridGetTovar.SelectedItem as GetTovara);
                 AppData.Context.SaveChanges();
             }
-            UpdateGetTovares();
+            UpdatePostTovares();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             AppData.WindowAddEdit = new WindowAddEdit(new PagePrihodnaya(DataGridGetTovar.SelectedItem as GetTovara));
             AppData.WindowAddEdit.ShowDialog();
-            UpdateGetTovares();
+            UpdatePostTovares();
         }
     }
 }

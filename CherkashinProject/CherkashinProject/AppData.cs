@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CherkashinProject.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace CherkashinProject
         public static Frame MainFrame;
         public static Entity.linecoreBaseEntities Context = new Entity.linecoreBaseEntities();
         public static WindowAddEdit WindowAddEdit = new WindowAddEdit(null);
+        public static Users currentUser = null;
     }
 }

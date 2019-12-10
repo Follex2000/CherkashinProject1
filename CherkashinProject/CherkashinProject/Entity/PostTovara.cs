@@ -30,6 +30,8 @@ public partial class PostTovara
 
     public int UserId { get; set; }
 
+    public System.DateTime DateOfPost { get; set; }
+
 
 
     public virtual Kontragent Kontragent { get; set; }

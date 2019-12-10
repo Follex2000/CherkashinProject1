@@ -138,6 +138,75 @@
   <data name="BtnEdit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="BtnPrihodnaya" xml:space="preserve">
+    <value>Prihodnaya</value>
+  </data>
+  <data name="BtnRashodnaya" xml:space="preserve">
+    <value>Rashodnaya</value>
+  </data>
+  <data name="CaptionError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="CBxAddColor" xml:space="preserve">
+    <value>Add color</value>
+  </data>
+  <data name="CBxAddCountry" xml:space="preserve">
+    <value>Add country</value>
+  </data>
+  <data name="DGCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="DGDateOfGet" xml:space="preserve">
+    <value>Date of get</value>
+  </data>
+  <data name="DGDateOfSale" xml:space="preserve">
+    <value>Date of sale</value>
+  </data>
+  <data name="DGGetId" xml:space="preserve">
+    <value>Get ID</value>
+  </data>
+  <data name="DGKontragent" xml:space="preserve">
+    <value>Kontragent</value>
+  </data>
+  <data name="DGManager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="DGPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="DGSklad" xml:space="preserve">
+    <value>Sklad</value>
+  </data>
+  <data name="DGTovar" xml:space="preserve">
+    <value>Tovar</value>
+  </data>
+  <data name="ErrorAddColorDuplicates" xml:space="preserve">
+    <value>Color duplicates!</value>
+  </data>
+  <data name="ErrorAddColorEmpty" xml:space="preserve">
+    <value>Color cannot be empty!</value>
+  </data>
+  <data name="ErrorAddCountryDuplicates" xml:space="preserve">
+    <value>Country duplicates!</value>
+  </data>
+  <data name="ErrorAddCountryEmpty" xml:space="preserve">
+    <value>Country cannot be empty!</value>
+  </data>
+  <data name="ErrorSomethingWrong" xml:space="preserve">
+    <value>You entered something wrong!</value>
+  </data>
+  <data name="ErrorUnspecified" xml:space="preserve">
+    <value>Unspecified error!</value>
+  </data>
+  <data name="FilterByTovar" xml:space="preserve">
+    <value>Filter by tovar :</value>
+  </data>
+  <data name="MessageSuccessfullAdd" xml:space="preserve">
+    <value>Successfully added!</value>
+  </data>
+  <data name="MessageSuccessfullEdit" xml:space="preserve">
+    <value>Successfully edited!</value>
+  </data>
   <data name="NumberTovar" xml:space="preserve">
     <value>Number product</value>
   </data>
@@ -152,6 +221,21 @@
   </data>
   <data name="ProductName" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="SearchBySkladOrManager" xml:space="preserve">
+    <value>Search by sklad or manger :</value>
+  </data>
+  <data name="TextArticle" xml:space="preserve">
+    <value>Article :</value>
+  </data>
+  <data name="TextColor" xml:space="preserve">
+    <value>Color :</value>
+  </data>
+  <data name="TextCount" xml:space="preserve">
+    <value>Count :</value>
+  </data>
+  <data name="TextCountry" xml:space="preserve">
+    <value>Country :</value>
   </data>
   <data name="TextFilterByCountry" xml:space="preserve">
     <value>Filter by country :</value>
@@ -179,6 +263,9 @@
   </data>
   <data name="TextSelect" xml:space="preserve">
     <value>Are you sure?</value>
+  </data>
+  <data name="TextTovarName" xml:space="preserve">
+    <value>Tovar name :</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>Name</value>

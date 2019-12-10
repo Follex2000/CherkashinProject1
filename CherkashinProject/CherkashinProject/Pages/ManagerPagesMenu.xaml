@@ -1,4 +1,4 @@
-﻿<Page x:Class="CherkashinProject.Pages.PageRashodnaya"
+﻿<Page x:Class="CherkashinProject.Pages.ManagerPagesMenu"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:CherkashinProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageRashodnaya">
+      Title="ManagerPagesMenu">
 
     <Grid>
         

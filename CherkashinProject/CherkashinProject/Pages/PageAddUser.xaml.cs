@@ -17,22 +17,16 @@ using System.Windows.Shapes;
 namespace CherkashinProject.Pages
 {
     /// <summary>
-    /// Interaction logic for PagePrihodnaya.xaml
+    /// Interaction logic for PageAddUser.xaml
     /// </summary>
-    public partial class PagePrihodnaya : Page
+    public partial class PageAddUser : Page
     {
-        GetTovara _cgt = null;
-        public PagePrihodnaya(GetTovara currentGetTovara)
+        Users _cu = null;
+        public PageAddUser(Users currentUser)
         {
             InitializeComponent();
-            _cgt = currentGetTovara;
-            BtnAdd.Content = Properties.Resources.BtnEdit;
-        }
-
-        public PagePrihodnaya()
-        {
-            InitializeComponent();
-            BtnAdd.Content = Properties.Resources.BtnAdd;
+            _cu = currentUser;
+            
         }
     }
 }

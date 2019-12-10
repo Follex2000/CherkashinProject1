@@ -27,12 +27,22 @@ namespace CherkashinProject.Pages
 
         private void ButtonUsers_Click(object sender, RoutedEventArgs e)
         {
-            AppData.MainFrame.Navigate(new Pages.PageAllUser());
+            AppData.MainFrame.Navigate(new PageAllUser());
         }
 
         private void BtnTovar_Click(object sender, RoutedEventArgs e)
         {
-            AppData.MainFrame.Navigate(new Pages.PageAllTovar());
+            AppData.MainFrame.Navigate(new PageAllTovar());
+        }
+
+        private void BtnPrihodnaya_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.MainFrame.Navigate(new PageGetTovar());
+        }
+
+        private void BtnRashodnaya_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.MainFrame.Navigate(new PagePostTovar());
         }
     }
 }

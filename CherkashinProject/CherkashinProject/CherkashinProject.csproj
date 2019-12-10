@@ -100,11 +100,26 @@
     <Compile Include="Entity\Users.cs">
       <DependentUpon>Model_LineCore.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ManagerPagesMenu.xaml.cs">
+      <DependentUpon>ManagerPagesMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddTovar.xaml.cs">
+      <DependentUpon>PageAddTovar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddUser.xaml.cs">
+      <DependentUpon>PageAddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagePostTovar.xaml.cs">
+      <DependentUpon>PagePostTovar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PagePrihodnaya.xaml.cs">
       <DependentUpon>PagePrihodnaya.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageRashodnaya.xaml.cs">
       <DependentUpon>PageRashodnaya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SellerPagesMenu.xaml.cs">
+      <DependentUpon>SellerPagesMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowAddEdit.xaml.cs">
       <DependentUpon>WindowAddEdit.xaml</DependentUpon>
@@ -130,6 +145,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ManagerPagesMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddTovar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageAllTovar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,11 +169,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagePostTovar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PagePrihodnaya.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageRashodnaya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SellerPagesMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

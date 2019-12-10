@@ -30,6 +30,8 @@ public partial class GetTovara
 
     public int UserId { get; set; }
 
+    public System.DateTime DateOfGet { get; set; }
+
 
 
     public virtual Sklad Sklad { get; set; }

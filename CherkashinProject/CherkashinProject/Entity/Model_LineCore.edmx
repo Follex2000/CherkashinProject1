@@ -22,6 +22,7 @@
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="Price" Type="float" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="DateOfGet" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Kontragent">
           <Key>
@@ -40,6 +41,7 @@
           <Property Name="Price" Type="float" Nullable="false" />
           <Property Name="KontragentId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="DateOfPost" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -79,6 +81,7 @@
           <Property Name="TovarId" Type="int" Nullable="false" />
           <Property Name="TovarName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TovarArticle" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="ColorId" Type="int" Nullable="false" />
           <Property Name="TovarCountryId" Type="int" Nullable="false" />
         </EntityType>
@@ -336,6 +339,7 @@
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Double" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="DateOfGet" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Sklad" Relationship="linecoreBaseModel.FK_GetTovara_Sklad" FromRole="GetTovara" ToRole="Sklad" />
           <NavigationProperty Name="Tovares" Relationship="linecoreBaseModel.FK_GetTovara_Tovares" FromRole="GetTovara" ToRole="Tovares" />
           <NavigationProperty Name="Users" Relationship="linecoreBaseModel.FK_GetTovara_Users" FromRole="GetTovara" ToRole="Users" />
@@ -358,6 +362,7 @@
           <Property Name="Price" Type="Double" Nullable="false" />
           <Property Name="KontragentId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="DateOfPost" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Kontragent" Relationship="linecoreBaseModel.FK_PostTovara_Kontragent" FromRole="PostTovara" ToRole="Kontragent" />
           <NavigationProperty Name="Tovares" Relationship="linecoreBaseModel.FK_PostTovara_Tovares" FromRole="PostTovara" ToRole="Tovares" />
           <NavigationProperty Name="Users" Relationship="linecoreBaseModel.FK_PostTovara_Users" FromRole="PostTovara" ToRole="Users" />
@@ -403,6 +408,7 @@
           <Property Name="TovarId" Type="Int32" Nullable="false" />
           <Property Name="TovarName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TovarArticle" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="ColorId" Type="Int32" Nullable="false" />
           <Property Name="TovarCountryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Country" Relationship="linecoreBaseModel.FK_Tovares_Country" FromRole="Tovares" ToRole="Country" />
@@ -566,6 +572,7 @@
           <EntitySetMapping Name="GetTovara">
             <EntityTypeMapping TypeName="linecoreBaseModel.GetTovara">
               <MappingFragment StoreEntitySet="GetTovara">
+                <ScalarProperty Name="DateOfGet" ColumnName="DateOfGet" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
@@ -586,6 +593,7 @@
           <EntitySetMapping Name="PostTovara">
             <EntityTypeMapping TypeName="linecoreBaseModel.PostTovara">
               <MappingFragment StoreEntitySet="PostTovara">
+                <ScalarProperty Name="DateOfPost" ColumnName="DateOfPost" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="KontragentId" ColumnName="KontragentId" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
@@ -635,6 +643,7 @@
               <MappingFragment StoreEntitySet="Tovares">
                 <ScalarProperty Name="TovarCountryId" ColumnName="TovarCountryId" />
                 <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="TovarArticle" ColumnName="TovarArticle" />
                 <ScalarProperty Name="TovarName" ColumnName="TovarName" />
                 <ScalarProperty Name="TovarId" ColumnName="TovarId" />

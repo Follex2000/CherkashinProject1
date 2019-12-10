@@ -14,17 +14,28 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <!--<TextBlock Text="{x:Static prop:Resources.TextClimate}" Style="{StaticResource TextBlockText}"/>-->
-                    <ComboBox x:Name="CBxClimate" IsEditable="True" DisplayMemberPath="ClimateName" SelectionChanged="CBxClimate_SelectionChanged"/>
+                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="ClimateName" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <!--<TextBlock Text="{x:Static prop:Resources.TextHotel}" Style="{StaticResource TextBlockText}"/>-->
-                    <ComboBox x:Name="CBxHotel" DisplayMemberPath="NameHotel" SelectionChanged="CBxHotel_SelectionChanged"/>
+                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="NameHotel" />
+                </StackPanel><StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<TextBlock Text="{x:Static prop:Resources.TextHotel}" Style="{StaticResource TextBlockText}"/>-->
+                    <ComboBox x:Name="CBxManager" DisplayMemberPath="NameHotel" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <!--<TextBlock Text="{x:Static prop:Resources.TextCost}" Style="{StaticResource TextBlockText}"/>-->
-                    <TextBox x:Name="TBxCost" MaxLength="10" TextChanged="TBxCost_TextChanged"/>
+                    <TextBox x:Name="TBxCount" MaxLength="10" />
                 </StackPanel>
-                <Button Name="BtnAdd" Width="220" Click="BtnAdd_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<TextBlock Text="{x:Static prop:Resources.TextCost}" Style="{StaticResource TextBlockText}"/>-->
+                    <TextBox x:Name="TBxPrice" MaxLength="10" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <!--<TextBlock Text="{x:Static prop:Resources.TextProductionDate}" Style="{StaticResource TextBlockText}"/>-->
+                    <DatePicker x:Name="DPProductionDate" Width="175" Margin="5"/>
+                </StackPanel>
+                <Button Name="BtnAdd" Width="220"/>
             </StackPanel>
         </StackPanel>
     </Grid>
