@@ -10,6 +10,34 @@
       Title="PageRashodnaya">
 
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextTovar}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="ClimateName" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextSklad}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="NameHotel" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextManager}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxManager" DisplayMemberPath="NameHotel" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextCount}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxCount" MaxLength="10" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextPrice}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxPrice" MaxLength="10" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextDateOfGet}" Style="{StaticResource TextBlockText}"/>
+                    <DatePicker x:Name="DPDateOfGet" Width="175" Margin="5"/>
+                </StackPanel>
+                <Button x:Name="BtnAdd" Width="220" HorizontalAlignment="Center" Click="BtnAdd_Click"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

@@ -24,7 +24,7 @@ public partial class PostTovara
 
     public int Count { get; set; }
 
-    public double Price { get; set; }
+    public decimal Price { get; set; }
 
     public int KontragentId { get; set; }
 

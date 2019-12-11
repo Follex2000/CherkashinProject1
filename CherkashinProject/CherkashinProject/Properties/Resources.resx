@@ -282,4 +282,79 @@
   <data name="WrongPass" xml:space="preserve">
     <value>You entered the wrong password</value>
   </data>
+  <data name="BtnAddPrihodnaya" xml:space="preserve">
+    <value>Add prihodnaya</value>
+  </data>
+  <data name="BtnAddRashodnaya" xml:space="preserve">
+    <value>Add rashodnaya</value>
+  </data>
+  <data name="CaptionSuccessfully" xml:space="preserve">
+    <value>Successfully!</value>
+  </data>
+  <data name="CBxAddSklad" xml:space="preserve">
+    <value>Add sklad</value>
+  </data>
+  <data name="CBxAddTovar" xml:space="preserve">
+    <value>Add tovar</value>
+  </data>
+  <data name="CBxAddUser" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="ErrorArcticleFormat" xml:space="preserve">
+    <value>Field "Article" have wrong format!</value>
+  </data>
+  <data name="ErrorArticleEmpty" xml:space="preserve">
+    <value>Field "Article" is empty!</value>
+  </data>
+  <data name="ErrorColor" xml:space="preserve">
+    <value>Field "Color" have wrong format!</value>
+  </data>
+  <data name="ErrorCountEmpty" xml:space="preserve">
+    <value>Field "Count" is empty!</value>
+  </data>
+  <data name="ErrorCountFormat" xml:space="preserve">
+    <value>Field "Count" have wrong format!</value>
+  </data>
+  <data name="ErrorCountry" xml:space="preserve">
+    <value>Field "Country" have wrong format!</value>
+  </data>
+  <data name="ErrorManager" xml:space="preserve">
+    <value>Field "Manager" have wrong format!</value>
+  </data>
+  <data name="ErrorPriceEmpty" xml:space="preserve">
+    <value>Field "Price" is empty!</value>
+  </data>
+  <data name="ErrorPriceFormat" xml:space="preserve">
+    <value>Field "Price" have wrong format!</value>
+  </data>
+  <data name="ErrorSklad" xml:space="preserve">
+    <value>Field "Sklad" have wrong format!</value>
+  </data>
+  <data name="ErrorTovar" xml:space="preserve">
+    <value>Field "Tovar" have wrong format!</value>
+  </data>
+  <data name="ErrorTovarName" xml:space="preserve">
+    <value>Field "Tovar name" is empty!</value>
+  </data>
+  <data name="TextDateOfGet" xml:space="preserve">
+    <value>Date of get :</value>
+  </data>
+  <data name="TextManager" xml:space="preserve">
+    <value>Manager :</value>
+  </data>
+  <data name="TextName" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="TextPrice" xml:space="preserve">
+    <value>Price :</value>
+  </data>
+  <data name="TextRole" xml:space="preserve">
+    <value>Role :</value>
+  </data>
+  <data name="TextSklad" xml:space="preserve">
+    <value>Sklad :</value>
+  </data>
+  <data name="TextTovar" xml:space="preserve">
+    <value>Tovar :</value>
+  </data>
 </root>

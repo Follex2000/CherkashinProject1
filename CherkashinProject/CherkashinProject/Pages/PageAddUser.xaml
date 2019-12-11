@@ -3,12 +3,33 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:props="clr-namespace:CherkashinProject.Properties"
       xmlns:local="clr-namespace:CherkashinProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageAddUser">
 
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextName}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxName" MaxLength="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextLogin}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxLogin" MaxLength="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextPassword}" Style="{StaticResource TextBlockText}"/>
+                    <PasswordBox x:Name="TBxPassword" MaxLength="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static props:Resources.TextRole}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxRole" DisplayMemberPath="Name_Role" SelectionChanged="CBxRole_SelectionChanged" IsEditable="True"/>
+                </StackPanel>
+                <Button Name="BtnAdd" Width="220" Click="BtnAdd_Click" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

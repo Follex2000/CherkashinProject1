@@ -15,11 +15,20 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="Admin menu" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"></TextBlock>
-        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="BtnUsers" Click="ButtonUsers_Click" Content="{x:Static props:Resources.AllUsers}"></Button>
-            <Button x:Name="BtnTovar" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
-            <Button x:Name="BtnPrihodnaya" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
-            <Button x:Name="BtnRashodnaya" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel >
+                <Button x:Name="BtnUsers" Click="ButtonUsers_Click" Content="{x:Static props:Resources.AllUsers}"></Button>
+                <Button x:Name="BtnTovar" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
+                <Button x:Name="BtnPrihodnaya" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
+                <Button x:Name="BtnRashodnaya" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
+            </StackPanel>
+            <StackPanel >
+                <Button x:Name="BtnUser" Click="ButtonUsers_Click" Content="{x:Static props:Resources.}"></Button>
+                <Button x:Name="BtnTova" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
+                <Button x:Name="BtnPrihodnay" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
+                <Button x:Name="BtnRashodnay" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
+            </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Page>

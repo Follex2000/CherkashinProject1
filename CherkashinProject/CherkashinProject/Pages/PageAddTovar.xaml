@@ -14,19 +14,19 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextTovarName}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxTovarName" MaxLength="35"/>
+                    <TextBox x:Name="TBxTovarName" MaxLength="35" TextChanged="TBxTovarName_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextArticle}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxArticle" MaxLength="35"/>
+                    <TextBox x:Name="TBxArticle" MaxLength="35" TextChanged="TBxArticle_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextColor}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxColor" DisplayMemberPath="Color" SelectionChanged="CBxColor_SelectionChanged"/>
+                    <ComboBox x:Name="CBxColor" DisplayMemberPath="Color" SelectionChanged="CBxColor_SelectionChanged" IsEditable="True"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextCountry}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxCountry" DisplayMemberPath="CountryName" SelectionChanged="CBxCountry_SelectionChanged"/>
+                    <ComboBox x:Name="CBxCountry" DisplayMemberPath="CountryName" SelectionChanged="CBxCountry_SelectionChanged" IsEditable="True"/>
                 </StackPanel>
                 <Button Name="BtnAddEdit" Width="200" HorizontalAlignment="Center" Click="BtnAddEdit_Click"/>
             </StackPanel>

@@ -24,5 +24,10 @@ namespace CherkashinProject.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

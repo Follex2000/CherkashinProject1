@@ -91,14 +91,7 @@ namespace CherkashinProject.Pages
                 };
                 AppData.Context.TovarColor.Add(color);
                 AppData.Context.SaveChanges();
-                var newColor = new TovarColor()
-                {
-                    ColorId = -1,
-                    Color = Properties.Resources.CBxAddColor
-                };
-                var colors = AppData.Context.TovarColor.ToList();
-                colors.Insert(0, newColor);
-                ((ComboBox)sender).ItemsSource = colors.OrderBy(p => p.ColorId);
+                UpdateComboBoxes();
                 ((ComboBox)sender).SelectedItem = color;
             }
         }
@@ -127,15 +120,7 @@ namespace CherkashinProject.Pages
                     CountryName = ((ComboBox)sender).Text
                 };
                 AppData.Context.Country.Add(country);
-                AppData.Context.SaveChanges();
-                var newCountry = new Country()
-                {
-                    CountryId = 0,
-                    CountryName = Properties.Resources.CBxAddCountry
-                };
-                var climates = AppData.Context.Country.ToList();
-                climates.Insert(0, newCountry);
-                ((ComboBox)sender).ItemsSource = climates.OrderBy(p => p.CountryId);
+                UpdateComboBoxes();
                 ((ComboBox)sender).SelectedItem = country;
             }
         }
@@ -144,12 +129,17 @@ namespace CherkashinProject.Pages
         {
             StringBuilder error = new StringBuilder();
             int article = 0;
-            if (string.IsNullOrWhiteSpace(TBxHotelName.Text))
-                error.AppendLine(Properties.Resources.ErrorHotelName);
-            if (string.IsNullOrWhiteSpace(TBxAddress.Text))
-                error.AppendLine(Properties.Resources.ErrorAddress);
+            if (string.IsNullOrWhiteSpace(TBxTovarName.Text))
+                error.AppendLine(Properties.Resources.ErrorTovarName);
+            if (string.IsNullOrWhiteSpace(TBxArticle.Text))
+                error.AppendLine(Properties.Resources.ErrorArticleEmpty);
+            else
+                if (!int.TryParse(TBxArticle.Text, out article))
+                error.AppendLine(Properties.Resources.ErrorArcticleFormat);
             if (!(CBxCountry.SelectedItem is Country))
                 error.AppendLine(Properties.Resources.ErrorCountry);
+            if (!(CBxColor.SelectedItem is TovarColor))
+                error.AppendLine(Properties.Resources.ErrorColor);
             if (!error.ToString().Equals(""))
             {
                 System.Windows.MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
@@ -161,30 +151,31 @@ namespace CherkashinProject.Pages
 
                 if (_ct == null)
                 {
-                    Tovares hotel = new Tovares()
+                    Tovares tovar = new Tovares()
                     {
                         TovarId = AppData.Context.Tovares.Max(p => p.TovarId) + 1,
                         TovarName = TBxTovarName.Text,
                         TovarArticle = article,
                         Country = CBxCountry.SelectedItem as Country,
-                        Stars = int.Parse(CBxRating.SelectedValue.ToString()),
-                        Address = TBxAddress.Text
+                        TovarColor = CBxColor.SelectedItem as TovarColor,
+                        Count = 0,
                     };
-                    AppData.context.Hotels.Add(hotel);
+                    AppData.Context.Tovares.Add(tovar);
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    _ct.NameHotel = TBxHotelName.Text;
+                    _ct.TovarName = TBxTovarName.Text;
+                    _ct.TovarArticle = article;
                     _ct.Country = CBxCountry.SelectedItem as Country;
-                    _ct.Stars = int.Parse(CBxRating.SelectedValue.ToString());
-                    _ct.Address = TBxAddress.Text;
+                    _ct.TovarColor = CBxColor.SelectedItem as TovarColor;
+                    _ct.Count = 0;
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                AppData.context.SaveChanges();
-                AppData.WindowAdd.CloseDialog();
+                AppData.Context.SaveChanges();
+                AppData.WindowAddEdit.CloseDialog();
 
             }
             catch (Exception ex)
@@ -193,5 +184,17 @@ namespace CherkashinProject.Pages
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void TBxTovarName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CheckForInteger.CheckForInt(sender);
+        }
+
+        private void TBxArticle_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CheckForInteger.CheckForInt(sender);
+        }
+
+        
     }
 }

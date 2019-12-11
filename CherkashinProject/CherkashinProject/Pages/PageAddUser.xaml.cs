@@ -28,5 +28,15 @@ namespace CherkashinProject.Pages
             _cu = currentUser;
             
         }
+
+        private void CBxRole_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

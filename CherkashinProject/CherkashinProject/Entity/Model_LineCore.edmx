@@ -20,7 +20,7 @@
           <Property Name="TovarId" Type="int" Nullable="false" />
           <Property Name="SkladId" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
-          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="DateOfGet" Type="date" Nullable="false" />
         </EntityType>
@@ -38,7 +38,7 @@
           <Property Name="NumberId" Type="int" Nullable="false" />
           <Property Name="TovarId" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
-          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
           <Property Name="KontragentId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="DateOfPost" Type="date" Nullable="false" />
@@ -337,7 +337,7 @@
           <Property Name="TovarId" Type="Int32" Nullable="false" />
           <Property Name="SkladId" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="DateOfGet" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Sklad" Relationship="linecoreBaseModel.FK_GetTovara_Sklad" FromRole="GetTovara" ToRole="Sklad" />
@@ -359,7 +359,7 @@
           <Property Name="NumberId" Type="Int32" Nullable="false" />
           <Property Name="TovarId" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="KontragentId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="DateOfPost" Type="DateTime" Nullable="false" Precision="0" />

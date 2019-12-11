@@ -7,35 +7,35 @@
       xmlns:props ="clr-namespace:CherkashinProject.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PagePrihodnaya">
+      Title="PagePrihodnaya" Loaded="Page_Loaded">
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextClimate}" Style="{StaticResource TextBlockText}"/>-->
-                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="ClimateName" />
+                    <TextBlock Text="{x:Static props:Resources.TextTovar}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="ClimateName" SelectionChanged="CBxTovar_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextHotel}" Style="{StaticResource TextBlockText}"/>-->
-                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="NameHotel" />
+                    <TextBlock Text="{x:Static props:Resources.TextSklad}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="NameHotel" SelectionChanged="CBxSklad_SelectionChanged" IsEditable="True"/>
                 </StackPanel><StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextHotel}" Style="{StaticResource TextBlockText}"/>-->
-                    <ComboBox x:Name="CBxManager" DisplayMemberPath="NameHotel" />
+                    <TextBlock Text="{x:Static props:Resources.TextManager}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxManager" DisplayMemberPath="NameHotel" SelectionChanged="CBxManager_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextCost}" Style="{StaticResource TextBlockText}"/>-->
+                    <TextBlock Text="{x:Static props:Resources.TextCount}" Style="{StaticResource TextBlockText}"/>
                     <TextBox x:Name="TBxCount" MaxLength="10" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextCost}" Style="{StaticResource TextBlockText}"/>-->
+                    <TextBlock Text="{x:Static props:Resources.TextPrice}" Style="{StaticResource TextBlockText}"/>
                     <TextBox x:Name="TBxPrice" MaxLength="10" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <!--<TextBlock Text="{x:Static prop:Resources.TextProductionDate}" Style="{StaticResource TextBlockText}"/>-->
-                    <DatePicker x:Name="DPProductionDate" Width="175" Margin="5"/>
+                    <TextBlock Text="{x:Static props:Resources.TextDateOfGet}" Style="{StaticResource TextBlockText}"/>
+                    <DatePicker x:Name="DPDateOfGet" Width="175" Margin="5"/>
                 </StackPanel>
-                <Button Name="BtnAdd" Width="220"/>
+                <Button x:Name="BtnAdd" Width="220" HorizontalAlignment="Center" Click="BtnAdd_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>
