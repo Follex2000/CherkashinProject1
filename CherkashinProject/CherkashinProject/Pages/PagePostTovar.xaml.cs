@@ -79,7 +79,8 @@ namespace CherkashinProject.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            AppData.WindowAddEdit = new WindowAddEdit(new PagePrihodnaya(DataGridGetTovar.SelectedItem as GetTovara));
+            AppData.WindowAddEdit = new WindowAddEdit();
+            AppData.WindowAddEdit.ChangePage(new PagePrihodnaya(DataGridGetTovar.SelectedItem as GetTovara));
             AppData.WindowAddEdit.ShowDialog();
             UpdatePostTovares();
         }

@@ -21,6 +21,7 @@ namespace CherkashinProject.Pages
     /// </summary>
     public partial class PageAddTovar : Page
     {
+        private Page _pg = null;
         Tovares _ct = null;
         public PageAddTovar(Tovares currentTovares)
         {
@@ -35,8 +36,23 @@ namespace CherkashinProject.Pages
             BtnAddEdit.Content = Properties.Resources.BtnAdd;
         }
 
+        public PageAddTovar(Page page)
+        {
+            InitializeComponent();
+            _pg = page;
+            BtnAddEdit.Content = Properties.Resources.BtnAdd;
+        }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            if (_pg==null)
+            {
+                AppData.WindowAddEdit.HideBtnBack();
+            }
+            else
+            {
+                AppData.WindowAddEdit.ShowBtnBack();
+            }
             UpdateComboBoxes();
             if (_ct != null)
             {

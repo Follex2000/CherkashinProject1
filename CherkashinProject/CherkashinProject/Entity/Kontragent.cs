@@ -29,7 +29,7 @@ public partial class Kontragent
 
     public int KontragentId { get; set; }
 
-    public string Kontragent1 { get; set; }
+    public string KontragentName { get; set; }
 
 
 

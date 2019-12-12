@@ -132,6 +132,15 @@
   <data name="BtnAdd" xml:space="preserve">
     <value>Добавить</value>
   </data>
+  <data name="BtnAddTovar" xml:space="preserve">
+    <value>Добавить товар</value>
+  </data>
+  <data name="BtnAddUser" xml:space="preserve">
+    <value>Добавить пользователя</value>
+  </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Назад</value>
+  </data>
   <data name="BtnDelete" xml:space="preserve">
     <value>Удалить</value>
   </data>
@@ -149,6 +158,9 @@
   </data>
   <data name="CaptionSuccessfully" xml:space="preserve">
     <value>Успешно!</value>
+  </data>
+  <data name="CBxAddKontragent" xml:space="preserve">
+    <value>Добавить покупателя</value>
   </data>
   <data name="DGCount" xml:space="preserve">
     <value>Количество</value>
@@ -187,16 +199,16 @@
     <value>Поле "Цвет" имеет неправильный формат!</value>
   </data>
   <data name="ErrorCountEmpty" xml:space="preserve">
-    <value>Field "Count" is empty!</value>
+    <value>Поле "Количество" пустое!</value>
   </data>
   <data name="ErrorCountFormat" xml:space="preserve">
-    <value>Field "Count" have wrong format!</value>
+    <value>Поле "Количество" имеет неправильный формат!</value>
   </data>
   <data name="ErrorCountry" xml:space="preserve">
     <value>Поле "Страна" имеет неправильный формат!</value>
   </data>
   <data name="ErrorManager" xml:space="preserve">
-    <value>Field "Manager" have wrong format!</value>
+    <value>Поле "Менеджер" имеет неправильный формат!</value>
   </data>
   <data name="ErrorPriceEmpty" xml:space="preserve">
     <value>Поле "Цена" пустое!</value>
@@ -205,13 +217,13 @@
     <value>Поле "Цена" имеет неправильный формат!</value>
   </data>
   <data name="ErrorSklad" xml:space="preserve">
-    <value>Field "Sklad" have wrong format!</value>
+    <value>Поле "Склад" имеет неправильный формат!</value>
   </data>
   <data name="ErrorSomethingWrong" xml:space="preserve">
     <value>Вы что-то ввели не так!</value>
   </data>
   <data name="ErrorTovar" xml:space="preserve">
-    <value>Field "" have wrong format!</value>
+    <value>Поле "Товар" имеет неправильный формат!</value>
   </data>
   <data name="ErrorTovarName" xml:space="preserve">
     <value>Поле "Наименование товара" пустое!</value>
@@ -261,11 +273,17 @@
   <data name="TextDateOfGet" xml:space="preserve">
     <value>Дата получения :</value>
   </data>
+  <data name="TextDateOfSale" xml:space="preserve">
+    <value>Дата продажи :</value>
+  </data>
   <data name="TextFilterByCountry" xml:space="preserve">
     <value>Фильтрация по стране :</value>
   </data>
   <data name="TextFilterByRole" xml:space="preserve">
     <value>Фильтрация по роли :</value>
+  </data>
+  <data name="TextKontragent" xml:space="preserve">
+    <value>Покупатель :</value>
   </data>
   <data name="TextLang" xml:space="preserve">
     <value>Выберете язык:</value>
@@ -314,5 +332,59 @@
   </data>
   <data name="WrongPass" xml:space="preserve">
     <value>Вы ввели неверный пароль</value>
+  </data>
+  <data name="CBxAddSklad" xml:space="preserve">
+    <value>Добавить склад</value>
+  </data>
+  <data name="CBxAddTovar" xml:space="preserve">
+    <value>Добавить товар</value>
+  </data>
+  <data name="CBxAddUser" xml:space="preserve">
+    <value>Добавить пользователя</value>
+  </data>
+  <data name="ErrorAddColorDuplicates" xml:space="preserve">
+    <value>Цвет повторяется!</value>
+  </data>
+  <data name="ErrorAddColorEmpty" xml:space="preserve">
+    <value>Цвет не может быть пустой!</value>
+  </data>
+  <data name="ErrorAddCountryDuplicates" xml:space="preserve">
+    <value>Страна повторяется!</value>
+  </data>
+  <data name="ErrorAddCountryEmpty" xml:space="preserve">
+    <value>Страна не может быть пустой!</value>
+  </data>
+  <data name="ErrorAddSkladDuplicates" xml:space="preserve">
+    <value>Склад повторяется!</value>
+  </data>
+  <data name="ErrorAddSkladEmpty" xml:space="preserve">
+    <value>Склад не может быть пустой!</value>
+  </data>
+  <data name="TextSearchByManagerName" xml:space="preserve">
+    <value>Поиск по имени менеджера :</value>
+  </data>
+  <data name="TextSearchByName" xml:space="preserve">
+    <value>Поиск по имени :</value>
+  </data>
+  <data name="TextSeller" xml:space="preserve">
+    <value>Продавец :</value>
+  </data>
+  <data name="ErrorAddRoleDuplicates" xml:space="preserve">
+    <value>Роль повторяется!</value>
+  </data>
+  <data name="ErrorAddRoleEmpty" xml:space="preserve">
+    <value>Роль не может быть пустой!</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Поле "Лоигн" пустое!</value>
+  </data>
+  <data name="ErrorName" xml:space="preserve">
+    <value>Поле "Имя" пустое!</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Поле "Пароль" пустое!</value>
+  </data>
+  <data name="ErrorRole" xml:space="preserve">
+    <value>Поле "Роль" имеет неправильный формат!</value>
   </data>
 </root>

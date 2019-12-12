@@ -68,6 +68,11 @@ namespace CherkashinProject.Pages
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
+            if (AppData.currentUser.RoleId==1|| AppData.currentUser.RoleId == 2)
+            {
+                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error;
+                return;
+            }
             if (MessageBox.Show("Вы уверены, что хотите удалить этот товар?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 AppData.Context.Tovares.Remove(DataGridTovar.SelectedItem as Tovares);
@@ -78,7 +83,13 @@ namespace CherkashinProject.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            AppData.WindowAddEdit = new WindowAddEdit(new PageAddTovar(DataGridTovar.SelectedItem as Tovares));
+            if (AppData.currentUser.RoleId == 1AppData.currentUser.RoleId == 2)
+            {
+                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error;
+                return;
+            }
+            AppData.WindowAddEdit = new WindowAddEdit();
+            AppData.WindowAddEdit.ChangePage(new PageAddTovar(DataGridTovar.SelectedItem as Tovares));
             AppData.WindowAddEdit.ShowDialog();
             UpdateTovares();
         }

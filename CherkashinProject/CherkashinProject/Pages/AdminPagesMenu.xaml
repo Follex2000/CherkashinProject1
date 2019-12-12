@@ -21,12 +21,13 @@
                 <Button x:Name="BtnTovar" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
                 <Button x:Name="BtnPrihodnaya" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
                 <Button x:Name="BtnRashodnaya" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
+                
             </StackPanel>
             <StackPanel >
-                <Button x:Name="BtnUser" Click="ButtonUsers_Click" Content="{x:Static props:Resources.}"></Button>
-                <Button x:Name="BtnTova" Click="BtnTovar_Click" Content="{x:Static props:Resources.AllTovar}"></Button>
-                <Button x:Name="BtnPrihodnay" Click="BtnPrihodnaya_Click" Content="{x:Static props:Resources.BtnPrihodnaya}"></Button>
-                <Button x:Name="BtnRashodnay" Click="BtnRashodnaya_Click" Content="{x:Static props:Resources.BtnRashodnaya}"></Button>
+                <Button x:Name="BtnAddUser" Click="BtnAddUser_Click" Content="{x:Static props:Resources.BtnAddUser}"></Button>
+                <Button x:Name="BtnAddTovar" Click="BtnAddTovar_Click"  Content="{x:Static props:Resources.BtnAddTovar}"></Button>
+                <Button x:Name="BtnAddPrihodnaya" Click="BtnAddPrihodnaya_Click"  Content="{x:Static props:Resources.BtnAddPrihodnaya}"></Button>
+                <Button x:Name="BtnAddRashodnaya" Click="BtnAddRashodnaya_Click"  Content="{x:Static props:Resources.BtnAddRashodnaya}"></Button>
             </StackPanel>
         </StackPanel>
         

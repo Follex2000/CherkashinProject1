@@ -24,5 +24,22 @@ namespace CherkashinProject.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnTovar_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.MainFrame.Navigate(new PageAllTovar());
+        }
+
+        private void BtnRashodnaya_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.MainFrame.Navigate(new PagePostTovar());
+        }
+
+        private void BtnAddRashodnaya_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.WindowAddEdit = new WindowAddEdit();
+            AppData.WindowAddEdit.ChangePage(new PageRashodnaya());
+            AppData.WindowAddEdit.ShowDialog();
+        }
     }
 }

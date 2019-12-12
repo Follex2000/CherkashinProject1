@@ -124,6 +124,33 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add tovar.
+        /// </summary>
+        public static string BtnAddTovar {
+            get {
+                return ResourceManager.GetString("BtnAddTovar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add user.
+        /// </summary>
+        public static string BtnAddUser {
+            get {
+                return ResourceManager.GetString("BtnAddUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string BtnBack {
+            get {
+                return ResourceManager.GetString("BtnBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string BtnDelete {
@@ -192,6 +219,24 @@ namespace CherkashinProject.Properties {
         public static string CBxAddCountry {
             get {
                 return ResourceManager.GetString("CBxAddCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Kontragent.
+        /// </summary>
+        public static string CBxAddKontragent {
+            get {
+                return ResourceManager.GetString("CBxAddKontragent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add role.
+        /// </summary>
+        public static string CBxAddRole {
+            get {
+                return ResourceManager.GetString("CBxAddRole", resourceCulture);
             }
         }
         
@@ -340,6 +385,60 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kontragent duplicates!.
+        /// </summary>
+        public static string ErrorAddKontragentDuplicates {
+            get {
+                return ResourceManager.GetString("ErrorAddKontragentDuplicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kontragent cannot be empty!.
+        /// </summary>
+        public static string ErrorAddKontragentEmpty {
+            get {
+                return ResourceManager.GetString("ErrorAddKontragentEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role duplicates!.
+        /// </summary>
+        public static string ErrorAddRoleDuplicates {
+            get {
+                return ResourceManager.GetString("ErrorAddRoleDuplicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role cannot be empty!.
+        /// </summary>
+        public static string ErrorAddRoleEmpty {
+            get {
+                return ResourceManager.GetString("ErrorAddRoleEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sklad duplicates!.
+        /// </summary>
+        public static string ErrorAddSkladDuplicates {
+            get {
+                return ResourceManager.GetString("ErrorAddSkladDuplicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sklad cannot be empty!.
+        /// </summary>
+        public static string ErrorAddSkladEmpty {
+            get {
+                return ResourceManager.GetString("ErrorAddSkladEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field &quot;Article&quot; have wrong format!.
         /// </summary>
         public static string ErrorArcticleFormat {
@@ -394,11 +493,47 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Kontragent&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorKontragent {
+            get {
+                return ResourceManager.GetString("ErrorKontragent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Login&quot; is empty!.
+        /// </summary>
+        public static string ErrorLogin {
+            get {
+                return ResourceManager.GetString("ErrorLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field &quot;Manager&quot; have wrong format!.
         /// </summary>
         public static string ErrorManager {
             get {
                 return ResourceManager.GetString("ErrorManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Name&quot; is empty!.
+        /// </summary>
+        public static string ErrorName {
+            get {
+                return ResourceManager.GetString("ErrorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Password&quot; is empty!.
+        /// </summary>
+        public static string ErrorPassword {
+            get {
+                return ResourceManager.GetString("ErrorPassword", resourceCulture);
             }
         }
         
@@ -417,6 +552,15 @@ namespace CherkashinProject.Properties {
         public static string ErrorPriceFormat {
             get {
                 return ResourceManager.GetString("ErrorPriceFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Role&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorRole {
+            get {
+                return ResourceManager.GetString("ErrorRole", resourceCulture);
             }
         }
         
@@ -592,6 +736,15 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date of sale :.
+        /// </summary>
+        public static string TextDateOfSale {
+            get {
+                return ResourceManager.GetString("TextDateOfSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter by country :.
         /// </summary>
         public static string TextFilterByCountry {
@@ -606,6 +759,15 @@ namespace CherkashinProject.Properties {
         public static string TextFilterByRole {
             get {
                 return ResourceManager.GetString("TextFilterByRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kontragent :.
+        /// </summary>
+        public static string TextKontragent {
+            get {
+                return ResourceManager.GetString("TextKontragent", resourceCulture);
             }
         }
         
@@ -682,6 +844,15 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search by manager name :.
+        /// </summary>
+        public static string TextSearchByManagerName {
+            get {
+                return ResourceManager.GetString("TextSearchByManagerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search by name :.
         /// </summary>
         public static string TextSearchByName {
@@ -705,6 +876,15 @@ namespace CherkashinProject.Properties {
         public static string TextSelect {
             get {
                 return ResourceManager.GetString("TextSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seller :.
+        /// </summary>
+        public static string TextSeller {
+            get {
+                return ResourceManager.GetString("TextSeller", resourceCulture);
             }
         }
         

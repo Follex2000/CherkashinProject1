@@ -68,17 +68,48 @@ namespace CherkashinProject.Pages
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите удалить этого пользователя?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            var user = DataGridAllUser.SelectedItem as Users;
+            if (user.RoleId==0)
             {
-                AppData.Context.Users.Remove(DataGridAllUser.SelectedItem as Users);
-                AppData.Context.SaveChanges();
+                if (user==AppData.currentUser)
+                {
+                    if (MessageBox.Show("Вы уверены, что хотите удалить сами себя?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                    {
+                        AppData.Context.Users.Remove(user);
+                        AppData.Context.SaveChanges();
+                        AppData.MainFrame.Navigate(new AutoRizationPage());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Вы не можете удалить администратора", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Вы уверены, что хотите удалить этого пользователя?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    AppData.Context.Users.Remove(user);
+                    AppData.Context.SaveChanges();
+                }
             }
             UpdateUsers();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            AppData.WindowAddEdit = new WindowAddEdit(new PageAddUser(DataGridAllUser.SelectedItem as Users));
+            var user = DataGridAllUser.SelectedItem as Users;
+            if (user.RoleId == 0)
+            {
+                if (user != AppData.currentUser)
+                {
+                    MessageBox.Show("Вы не можете удалить администратора", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+            AppData.WindowAddEdit = new WindowAddEdit();
+            AppData.WindowAddEdit.ChangePage(new PageAddUser(user));
             AppData.WindowAddEdit.ShowDialog();
             UpdateUsers();
         }

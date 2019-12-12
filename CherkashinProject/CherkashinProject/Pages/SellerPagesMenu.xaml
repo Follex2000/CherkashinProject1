@@ -10,6 +10,17 @@
       Title="SellerPagesMenu">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Seller menu" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"></TextBlock>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel >
+                <Button x:Name="BtnTovar" Content="{x:Static props:Resources.AllTovar}" Click="BtnTovar_Click"></Button>
+                <Button x:Name="BtnRashodnaya" Content="{x:Static props:Resources.BtnRashodnaya}" Click="BtnRashodnaya_Click"></Button>
+                <Button x:Name="BtnAddRashodnaya" Content="{x:Static props:Resources.BtnAddRashodnaya}" Click="BtnAddRashodnaya_Click"></Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

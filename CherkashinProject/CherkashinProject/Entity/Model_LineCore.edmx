@@ -29,13 +29,13 @@
             <PropertyRef Name="KontragentId" />
           </Key>
           <Property Name="KontragentId" Type="int" Nullable="false" />
-          <Property Name="Kontragent" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="KontragentName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PostTovara">
           <Key>
-            <PropertyRef Name="NumberId" />
+            <PropertyRef Name="PostId" />
           </Key>
-          <Property Name="NumberId" Type="int" Nullable="false" />
+          <Property Name="PostId" Type="int" Nullable="false" />
           <Property Name="TovarId" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="Price" Type="money" Nullable="false" />
@@ -349,14 +349,14 @@
             <PropertyRef Name="KontragentId" />
           </Key>
           <Property Name="KontragentId" Type="Int32" Nullable="false" />
-          <Property Name="Kontragent1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KontragentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PostTovara" Relationship="linecoreBaseModel.FK_PostTovara_Kontragent" FromRole="Kontragent" ToRole="PostTovara" />
         </EntityType>
         <EntityType Name="PostTovara">
           <Key>
-            <PropertyRef Name="NumberId" />
+            <PropertyRef Name="PostId" />
           </Key>
-          <Property Name="NumberId" Type="Int32" Nullable="false" />
+          <Property Name="PostId" Type="Int32" Nullable="false" />
           <Property Name="TovarId" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -585,7 +585,7 @@
           <EntitySetMapping Name="Kontragent">
             <EntityTypeMapping TypeName="linecoreBaseModel.Kontragent">
               <MappingFragment StoreEntitySet="Kontragent">
-                <ScalarProperty Name="Kontragent1" ColumnName="Kontragent" />
+                <ScalarProperty Name="KontragentName" ColumnName="KontragentName" />
                 <ScalarProperty Name="KontragentId" ColumnName="KontragentId" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -599,7 +599,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="TovarId" ColumnName="TovarId" />
-                <ScalarProperty Name="NumberId" ColumnName="NumberId" />
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

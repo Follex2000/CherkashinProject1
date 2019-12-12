@@ -19,10 +19,9 @@ namespace CherkashinProject
     /// </summary>
     public partial class WindowAddEdit : Window
     {
-        public WindowAddEdit(Page page)
+        public WindowAddEdit()
         {
             InitializeComponent();
-            AddWindowFrame.Navigate(page);
         }
 
         public void CloseDialog()
@@ -33,6 +32,21 @@ namespace CherkashinProject
         public void ChangePage(Page page)
         {
             AddWindowFrame.Navigate(page);
+        }
+
+        public void ShowBtnBack()
+        {
+            BtnBack.Visibility = Visibility.Visible;
+        }
+
+        public void HideBtnBack()
+        {
+            BtnBack.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            AddWindowFrame.GoBack();
         }
     }
 }

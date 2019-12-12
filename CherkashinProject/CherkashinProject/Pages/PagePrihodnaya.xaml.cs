@@ -35,6 +35,22 @@ namespace CherkashinProject.Pages
             BtnAdd.Content = Properties.Resources.BtnAdd;
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateComboBoxes();
+            if (_cgt!=null)
+            {
+                CBxTovar.SelectedItem = _cgt.Tovares;
+                CBxSklad.SelectedItem = _cgt.Sklad;
+                CBxManager.SelectedItem = _cgt.Users;
+                TBxCount.Text = _cgt.Count.ToString();
+                TBxPrice.Text = _cgt.Price.ToString();
+                DPDateOfGet.SelectedDate = _cgt.DateOfGet;
+            }
+            UpdateComboBoxes();
+            AppData.WindowAddEdit.HideBtnBack();
+        }
+
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder error = new StringBuilder();
@@ -69,7 +85,7 @@ namespace CherkashinProject.Pages
                 {
                     GetTovara getTovar = new GetTovara()
                     {
-                        GetId = AppData.Context.Tovares.Max(p => p.TovarId) + 1,
+                        GetId = AppData.Context.GetTovara.Max(p => p.GetId) + 1,
                         Tovares = CBxTovar.SelectedItem as Tovares,
                         Sklad = CBxSklad.SelectedItem as Sklad,
                         Count = count,
@@ -77,6 +93,7 @@ namespace CherkashinProject.Pages
                         Users = CBxManager.SelectedItem as Users,
                         DateOfGet = (DateTime)DPDateOfGet.SelectedDate
                     };
+                    getTovar.Tovares.Count = getTovar.Tovares.Count + count;
                     AppData.Context.GetTovara.Add(getTovar);
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
@@ -92,8 +109,8 @@ namespace CherkashinProject.Pages
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                AppData.Context.SaveChanges();
                 AppData.WindowAddEdit.CloseDialog();
+                AppData.Context.SaveChanges();
 
             }
             catch (Exception ex)
@@ -107,74 +124,45 @@ namespace CherkashinProject.Pages
         {
             var tovares = AppData.Context.Tovares.ToList();
             var sklads = AppData.Context.Sklad.ToList();
-            var users = AppData.Context.Users.ToList();
+            var managers = AppData.Context.Users.ToList();
             switch (AppData.currentUser.RoleId)
             {
                 case 0:
                     {
                         CBxSklad.IsEditable = true;
+                        managers = managers.Where(p => p.RoleId == 2).ToList();
                         tovares.Insert(0, new Tovares()
                         {
-                            TovarName = Properties.Resources.CBxAddColor
+                            TovarName = Properties.Resources.CBxAddTovar
                         });
                         sklads.Insert(0, new Sklad()
                         {
                             SkladName = Properties.Resources.CBxAddSklad
                         });
-                        users.Insert(0, new Users()
+                        managers.Insert(0, new Users()
                         {
                             Name = Properties.Resources.CBxAddUser
                         });
-                        users = users.Where(p => p.RoleId == 1).ToList();
-                        CBxTovar.SelectedIndex = 0;
-                        CBxSklad.SelectedIndex = 0;
                         break;
                     }
-                case 1:
+                case 2:
                     {
                         CBxSklad.IsEditable = false;
-                        users = users.Where(p => p.UserId == AppData.currentUser.UserId).ToList();
+                        managers = managers.Where(p => p.UserId == AppData.currentUser.UserId).ToList();
+                        CBxManager.SelectedIndex = 0;
                         break;
                     }
             }
-            CBxManager.SelectedIndex = 0;
+            CBxTovar.ItemsSource = tovares;
+            CBxSklad.ItemsSource = sklads;
+            CBxManager.ItemsSource = managers;
         }
 
         private void CBxTovar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (((ComboBox)sender).SelectedIndex == 0)
             {
-
-                if (((ComboBox)sender).Text.Equals(""))
-                {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorEmpty, Properties.Resources.CaptionError,
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                    ((ComboBox)sender).SelectedItem = null;
-                    return;
-                }
-                if (AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().Count != 0)
-                {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorDuplicates, Properties.Resources.CaptionError,
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                    ((ComboBox)sender).SelectedItem = AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().FirstOrDefault();
-                    return;
-                }
-                var color = new TovarColor()
-                {
-                    ColorId = AppData.Context.TovarColor.Max(p => p.ColorId) + 1,
-                    Color = ((ComboBox)sender).Text
-                };
-                AppData.Context.TovarColor.Add(color);
-                AppData.Context.SaveChanges();
-                var newColor = new TovarColor()
-                {
-                    ColorId = -1,
-                    Color = Properties.Resources.CBxAddColor
-                };
-                var colors = AppData.Context.TovarColor.ToList();
-                colors.Insert(0, newColor);
-                ((ComboBox)sender).ItemsSource = colors.OrderBy(p => p.ColorId);
-                ((ComboBox)sender).SelectedItem = color;
+                AppData.WindowAddEdit.ChangePage(new PageAddTovar(this));
             }
         }
 
@@ -185,34 +173,27 @@ namespace CherkashinProject.Pages
 
                 if (((ComboBox)sender).Text.Equals(""))
                 {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorEmpty, Properties.Resources.CaptionError,
+                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddSkladEmpty, Properties.Resources.CaptionError,
                         MessageBoxButton.OK, MessageBoxImage.Error);
                     ((ComboBox)sender).SelectedItem = null;
                     return;
                 }
-                if (AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().Count != 0)
+                if (AppData.Context.Sklad.Where(p => p.SkladName.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().Count != 0)
                 {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorDuplicates, Properties.Resources.CaptionError,
+                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddSkladDuplicates, Properties.Resources.CaptionError,
                         MessageBoxButton.OK, MessageBoxImage.Error);
-                    ((ComboBox)sender).SelectedItem = AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().FirstOrDefault();
+                    ((ComboBox)sender).SelectedItem = AppData.Context.Sklad.Where(p => p.SkladName.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().FirstOrDefault();
                     return;
                 }
-                var color = new TovarColor()
+                var sklad = new Sklad()
                 {
-                    ColorId = AppData.Context.TovarColor.Max(p => p.ColorId) + 1,
-                    Color = ((ComboBox)sender).Text
+                    SkladId = AppData.Context.Sklad.Max(p => p.SkladId) + 1,
+                    SkladName = ((ComboBox)sender).Text
                 };
-                AppData.Context.TovarColor.Add(color);
+                AppData.Context.Sklad.Add(sklad);
                 AppData.Context.SaveChanges();
-                var newColor = new TovarColor()
-                {
-                    ColorId = -1,
-                    Color = Properties.Resources.CBxAddColor
-                };
-                var colors = AppData.Context.TovarColor.ToList();
-                colors.Insert(0, newColor);
-                ((ComboBox)sender).ItemsSource = colors.OrderBy(p => p.ColorId);
-                ((ComboBox)sender).SelectedItem = color;
+                UpdateComboBoxes();
+                ((ComboBox)sender).SelectedItem = sklad;
             }
         }
 
@@ -220,46 +201,9 @@ namespace CherkashinProject.Pages
         {
             if (((ComboBox)sender).SelectedIndex == 0)
             {
-
-                if (((ComboBox)sender).Text.Equals(""))
-                {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorEmpty, Properties.Resources.CaptionError,
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                    ((ComboBox)sender).SelectedItem = null;
-                    return;
-                }
-                if (AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().Count != 0)
-                {
-                    System.Windows.MessageBox.Show(Properties.Resources.ErrorAddColorDuplicates, Properties.Resources.CaptionError,
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                    ((ComboBox)sender).SelectedItem = AppData.Context.TovarColor.Where(p => p.Color.ToLower() == ((ComboBox)sender).Text.ToLower()).ToList().FirstOrDefault();
-                    return;
-                }
-                var color = new TovarColor()
-                {
-                    ColorId = AppData.Context.TovarColor.Max(p => p.ColorId) + 1,
-                    Color = ((ComboBox)sender).Text
-                };
-                AppData.Context.TovarColor.Add(color);
-                AppData.Context.SaveChanges();
-                var newColor = new TovarColor()
-                {
-                    ColorId = -1,
-                    Color = Properties.Resources.CBxAddColor
-                };
-                var colors = AppData.Context.TovarColor.ToList();
-                colors.Insert(0, newColor);
-                ((ComboBox)sender).ItemsSource = colors.OrderBy(p => p.ColorId);
-                ((ComboBox)sender).SelectedItem = color;
+                AppData.WindowAddEdit.ChangePage(new PageAddUser(this));
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (_cgt!=null)
-            {
-                
-            }
-        }
     }
 }

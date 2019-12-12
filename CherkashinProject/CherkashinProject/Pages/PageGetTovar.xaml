@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static props:Resources.TextSearchByName}" Style="{StaticResource TextBlockText}"/>
+                <TextBlock Text="{x:Static props:Resources.TextSearchByManagerName}" Style="{StaticResource TextBlockText}"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
@@ -27,21 +27,21 @@
         <TextBlock Name="TbNothing" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="Никого не найдено!" Foreground="#E54128"></TextBlock>
         <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10" RowBackground="White" Name="DataGridGetTovar">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGGetId}" Width="*" Binding="{Binding GetId}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGTovar}" Width="*" Binding="{Binding Tovares.TovarName}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGSklad}" Width="*" Binding="{Binding Sklad.SkladName}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGManager}" Width="*" Binding="{Binding Users.Name}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGDateOfGet}" Width="*" Binding="{Binding DateOfGet}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGCount}" Width="*" Binding="{Binding Count}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGPrice}" Width="*" Binding="{Binding Price}"/>
-                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnEdit}" Width="1.15*">
+                <DataGridTextColumn Header="{x:Static props:Resources.DGGetId}" Width="auto" Binding="{Binding GetId}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGTovar}" Width="auto" Binding="{Binding Tovares.TovarName}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGSklad}" Width="auto" Binding="{Binding Sklad.SkladName}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGManager}" Width="auto" Binding="{Binding Users.Name}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGDateOfGet}" Width="auto" Binding="{Binding DateOfGet}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGCount}" Width="auto" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGPrice}" Width="auto" Binding="{Binding Price}"/>
+                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnEdit}" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Name="BtnEdit" Content="{x:Static props:Resources.BtnEdit}" Width="100" Click="BtnEdit_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnDelete}" Width="1.15*">
+                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnDelete}" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Name="BtnDelete" Content="{x:Static props:Resources.BtnDelete}" Width="100" Click="BtnDelete_Click"/>

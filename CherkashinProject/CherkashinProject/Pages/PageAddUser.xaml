@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:CherkashinProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAddUser">
+      Title="PageAddUser" Loaded="Page_Loaded">
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -22,11 +22,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextPassword}" Style="{StaticResource TextBlockText}"/>
-                    <PasswordBox x:Name="TBxPassword" MaxLength="20"/>
+                    <PasswordBox x:Name="PBxPassword" MaxLength="20"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextRole}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxRole" DisplayMemberPath="Name_Role" SelectionChanged="CBxRole_SelectionChanged" IsEditable="True"/>
+                    <ComboBox x:Name="CBxRole" DisplayMemberPath="RoleName" SelectionChanged="CBxRole_SelectionChanged" IsEditable="True"/>
                 </StackPanel>
                 <Button Name="BtnAdd" Width="220" Click="BtnAdd_Click" HorizontalAlignment="Center"/>
             </StackPanel>

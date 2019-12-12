@@ -18,7 +18,7 @@ using System;
 public partial class PostTovara
 {
 
-    public int NumberId { get; set; }
+    public int PostId { get; set; }
 
     public int TovarId { get; set; }
 

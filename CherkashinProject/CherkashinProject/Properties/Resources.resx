@@ -255,8 +255,8 @@
   <data name="TextQt" xml:space="preserve">
     <value>Question</value>
   </data>
-  <data name="TextSearchByName" xml:space="preserve">
-    <value>Search by name :</value>
+  <data name="TextSearchByManagerName" xml:space="preserve">
+    <value>Search by manager name :</value>
   </data>
   <data name="TextSearchByProductName" xml:space="preserve">
     <value>Search by product name :</value>
@@ -356,5 +356,65 @@
   </data>
   <data name="TextTovar" xml:space="preserve">
     <value>Tovar :</value>
+  </data>
+  <data name="BtnAddTovar" xml:space="preserve">
+    <value>Add tovar</value>
+  </data>
+  <data name="BtnAddUser" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CBxAddKontragent" xml:space="preserve">
+    <value>Add Kontragent</value>
+  </data>
+  <data name="TextDateOfSale" xml:space="preserve">
+    <value>Date of sale :</value>
+  </data>
+  <data name="TextKontragent" xml:space="preserve">
+    <value>Kontragent :</value>
+  </data>
+  <data name="CBxAddRole" xml:space="preserve">
+    <value>Add role</value>
+  </data>
+  <data name="ErrorAddKontragentDuplicates" xml:space="preserve">
+    <value>Kontragent duplicates!</value>
+  </data>
+  <data name="ErrorAddKontragentEmpty" xml:space="preserve">
+    <value>Kontragent cannot be empty!</value>
+  </data>
+  <data name="ErrorAddSkladDuplicates" xml:space="preserve">
+    <value>Sklad duplicates!</value>
+  </data>
+  <data name="ErrorAddSkladEmpty" xml:space="preserve">
+    <value>Sklad cannot be empty!</value>
+  </data>
+  <data name="ErrorKontragent" xml:space="preserve">
+    <value>Field "Kontragent" have wrong format!</value>
+  </data>
+  <data name="TextSearchByName" xml:space="preserve">
+    <value>Search by name :</value>
+  </data>
+  <data name="TextSeller" xml:space="preserve">
+    <value>Seller :</value>
+  </data>
+  <data name="ErrorAddRoleDuplicates" xml:space="preserve">
+    <value>Role duplicates!</value>
+  </data>
+  <data name="ErrorAddRoleEmpty" xml:space="preserve">
+    <value>Role cannot be empty!</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Field "Login" is empty!</value>
+  </data>
+  <data name="ErrorName" xml:space="preserve">
+    <value>Field "Name" is empty!</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Field "Password" is empty!</value>
+  </data>
+  <data name="ErrorRole" xml:space="preserve">
+    <value>Field "Role" have wrong format!</value>
   </data>
 </root>

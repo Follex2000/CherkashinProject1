@@ -12,7 +12,7 @@ namespace CherkashinProject
     {
         public static Frame MainFrame;
         public static Entity.linecoreBaseEntities Context = new Entity.linecoreBaseEntities();
-        public static WindowAddEdit WindowAddEdit = new WindowAddEdit(null);
+        public static WindowAddEdit WindowAddEdit = new WindowAddEdit();
         public static Users currentUser = null;
     }
 }

@@ -14,14 +14,14 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextTovar}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="ClimateName" SelectionChanged="CBxTovar_SelectionChanged" />
+                    <ComboBox x:Name="CBxTovar" DisplayMemberPath="TovarName" SelectionChanged="CBxTovar_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextSklad}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="NameHotel" SelectionChanged="CBxSklad_SelectionChanged" IsEditable="True"/>
+                    <ComboBox x:Name="CBxSklad" DisplayMemberPath="SkladName" SelectionChanged="CBxSklad_SelectionChanged" IsEditable="True"/>
                 </StackPanel><StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextManager}" Style="{StaticResource TextBlockText}"/>
-                    <ComboBox x:Name="CBxManager" DisplayMemberPath="NameHotel" SelectionChanged="CBxManager_SelectionChanged" />
+                    <ComboBox x:Name="CBxManager" DisplayMemberPath="Name" SelectionChanged="CBxManager_SelectionChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextCount}" Style="{StaticResource TextBlockText}"/>

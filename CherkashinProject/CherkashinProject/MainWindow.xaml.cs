@@ -78,5 +78,10 @@ namespace CherkashinProject
                 System.Diagnostics.Process.Start(App.ResourceAssembly.Location);
             }
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
