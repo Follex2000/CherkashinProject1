@@ -387,4 +387,7 @@
   <data name="ErrorRole" xml:space="preserve">
     <value>Поле "Роль" имеет неправильный формат!</value>
   </data>
+  <data name="ErrorTovarCount" xml:space="preserve">
+    <value>На складе отсутствует необходимое количество товара!</value>
+  </data>
 </root>

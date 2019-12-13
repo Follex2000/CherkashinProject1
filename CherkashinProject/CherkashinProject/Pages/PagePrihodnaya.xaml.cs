@@ -205,5 +205,36 @@ namespace CherkashinProject.Pages
             }
         }
 
+        private void TBxCount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
+
+        private void TBxPrice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            bool dot = true;
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+                if (item == '.' && dot)
+                {
+                    buf += item;
+                    dot = false;
+                }
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
     }
 }

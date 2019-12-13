@@ -417,4 +417,7 @@
   <data name="ErrorRole" xml:space="preserve">
     <value>Field "Role" have wrong format!</value>
   </data>
+  <data name="ErrorTovarCount" xml:space="preserve">
+    <value>In stock there is no necessary quantity of goods!</value>
+  </data>
 </root>

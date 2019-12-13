@@ -25,11 +25,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextCount}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxCount" MaxLength="10" />
+                    <TextBox x:Name="TBxCount" MaxLength="10" TextChanged="TBxCount_TextChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextPrice}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxPrice" MaxLength="10" />
+                    <TextBox x:Name="TBxPrice" MaxLength="10" TextChanged="TBxPrice_TextChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextDateOfGet}" Style="{StaticResource TextBlockText}"/>

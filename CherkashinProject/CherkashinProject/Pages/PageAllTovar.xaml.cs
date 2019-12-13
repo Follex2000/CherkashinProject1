@@ -70,7 +70,7 @@ namespace CherkashinProject.Pages
         {
             if (AppData.currentUser.RoleId==1|| AppData.currentUser.RoleId == 2)
             {
-                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error;
+                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (MessageBox.Show("Вы уверены, что хотите удалить этот товар?", "Уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
@@ -83,9 +83,9 @@ namespace CherkashinProject.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (AppData.currentUser.RoleId == 1AppData.currentUser.RoleId == 2)
+            if (AppData.currentUser.RoleId == 1||AppData.currentUser.RoleId == 2)
             {
-                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error;
+                MessageBox.Show("У вас недостаточно прав!", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             AppData.WindowAddEdit = new WindowAddEdit();

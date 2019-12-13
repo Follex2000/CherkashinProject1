@@ -592,6 +592,15 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to In stock there is no necessary quantity of goods!.
+        /// </summary>
+        public static string ErrorTovarCount {
+            get {
+                return ResourceManager.GetString("ErrorTovarCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field &quot;Tovar name&quot; is empty!.
         /// </summary>
         public static string ErrorTovarName {

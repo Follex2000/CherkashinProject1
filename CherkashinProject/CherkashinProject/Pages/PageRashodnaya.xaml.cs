@@ -43,7 +43,7 @@ namespace CherkashinProject.Pages
 
         void UpdateComboBoxes()
         {
-            var tovares = AppData.Context.Tovares.ToList();
+            var tovares = AppData.Context.Tovares.Where(p=>p.Count>0).ToList();
             var kontragents = AppData.Context.Kontragent.ToList();
             var users = AppData.Context.Users.ToList();
             switch (AppData.currentUser.RoleId)
@@ -100,8 +100,12 @@ namespace CherkashinProject.Pages
             if (string.IsNullOrWhiteSpace(TBxCount.Text))
                 error.AppendLine(Properties.Resources.ErrorCountEmpty);
             else
-                if (!int.TryParse(TBxCount.Text, out count))
+            if (!int.TryParse(TBxCount.Text, out count))
                 error.AppendLine(Properties.Resources.ErrorCountFormat);
+            else if (count > ((Tovares)CBxTovar.SelectedItem).Count)
+            {
+                error.AppendLine(Properties.Resources.ErrorCountFormat);
+            }
             if (string.IsNullOrWhiteSpace(TBxPrice.Text))
                 error.AppendLine(Properties.Resources.ErrorPriceEmpty);
             else
@@ -128,7 +132,7 @@ namespace CherkashinProject.Pages
                         Users = CBxManager.SelectedItem as Users,
                         DateOfPost = (DateTime)DPDateOfSale.SelectedDate
                     };
-                    postTovara.Tovares.Count = postTovara.Tovares.Count + count;
+                    postTovara.Tovares.Count = postTovara.Tovares.Count - count;
                     AppData.Context.PostTovara.Add(postTovara);
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
@@ -203,5 +207,36 @@ namespace CherkashinProject.Pages
             UpdateComboBoxes();
         }
 
+        private void TBxCount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
+
+        private void TBxPrice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            bool dot = true;
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+                if (item == '.' && dot)
+                {
+                    buf += item;
+                    dot = false;
+                }
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
     }
 }
