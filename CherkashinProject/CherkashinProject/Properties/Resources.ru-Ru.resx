@@ -360,9 +360,6 @@
   <data name="ErrorAddSkladEmpty" xml:space="preserve">
     <value>Склад не может быть пустой!</value>
   </data>
-  <data name="TextSearchByManagerName" xml:space="preserve">
-    <value>Поиск по имени менеджера :</value>
-  </data>
   <data name="TextSearchByName" xml:space="preserve">
     <value>Поиск по имени :</value>
   </data>
@@ -389,5 +386,14 @@
   </data>
   <data name="ErrorTovarCount" xml:space="preserve">
     <value>На складе отсутствует необходимое количество товара!</value>
+  </data>
+  <data name="DGPostId" xml:space="preserve">
+    <value>Код продажи</value>
+  </data>
+  <data name="TextFilterByTovar" xml:space="preserve">
+    <value>Фильтрация по товару :</value>
+  </data>
+  <data name="TextSearchByKontragentOrManager" xml:space="preserve">
+    <value>Поиск по контрагенту или менеджеру :</value>
   </data>
 </root>

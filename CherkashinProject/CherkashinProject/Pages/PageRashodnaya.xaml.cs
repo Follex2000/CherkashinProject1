@@ -39,6 +39,15 @@ namespace CherkashinProject.Pages
         {
             AppData.WindowAddEdit.HideBtnBack();
             UpdateComboBoxes();
+            if (_cpt!=null)
+            {
+                CBxTovar.SelectedItem = _cpt.Tovares;
+                CBxKontragent.SelectedItem = _cpt.Kontragent;
+                CBxManager.SelectedItem = _cpt.Users;
+                TBxCount.Text = _cpt.Count.ToString();
+                TBxPrice.Text = _cpt.Price.ToString();
+                DPDateOfSale.SelectedDate = _cpt.DateOfPost;
+            }
         }
 
         void UpdateComboBoxes()
@@ -59,11 +68,11 @@ namespace CherkashinProject.Pages
                         {
                             KontragentName = Properties.Resources.CBxAddSklad
                         });
+                        users = users.Where(p => p.RoleId == 2 || p.RoleId == 1).ToList();
                         users.Insert(0, new Users()
                         {
                             Name = Properties.Resources.CBxAddUser
                         });
-                        users = users.Where(p => p.RoleId == 2 || p.RoleId == 1).ToList();
                         break;
                     }
                 case 1:
@@ -161,6 +170,10 @@ namespace CherkashinProject.Pages
 
         private void CBxTovar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId != 0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
                 AppData.WindowAddEdit.ChangePage(new PageAddTovar(this));
@@ -170,6 +183,10 @@ namespace CherkashinProject.Pages
 
         private void CBxKontragent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId != 0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
 
@@ -200,6 +217,10 @@ namespace CherkashinProject.Pages
         }
         private void CBxManager_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId!=0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
                 AppData.WindowAddEdit.ChangePage(new PageAddUser(this));

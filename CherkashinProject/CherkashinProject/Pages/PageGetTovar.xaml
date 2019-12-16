@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static props:Resources.TextSearchByManagerName}" Style="{StaticResource TextBlockText}"/>
+                <TextBlock Text="{x:Static props:Resources.TextSearchByManagerOrSkladName}" Style="{StaticResource TextBlockText}"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">

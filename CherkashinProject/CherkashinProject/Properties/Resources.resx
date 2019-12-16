@@ -255,8 +255,8 @@
   <data name="TextQt" xml:space="preserve">
     <value>Question</value>
   </data>
-  <data name="TextSearchByManagerName" xml:space="preserve">
-    <value>Search by manager name :</value>
+  <data name="TextSearchByManagerOrSkladName" xml:space="preserve">
+    <value>Search by manager or sklad :</value>
   </data>
   <data name="TextSearchByProductName" xml:space="preserve">
     <value>Search by product name :</value>
@@ -419,5 +419,14 @@
   </data>
   <data name="ErrorTovarCount" xml:space="preserve">
     <value>In stock there is no necessary quantity of goods!</value>
+  </data>
+  <data name="DGPostId" xml:space="preserve">
+    <value>Post ID</value>
+  </data>
+  <data name="TextFilterByTovar" xml:space="preserve">
+    <value>Filter by tovar :</value>
+  </data>
+  <data name="TextSearchByKontragentOrManager" xml:space="preserve">
+    <value>Search by manager or kontragent :</value>
   </data>
 </root>

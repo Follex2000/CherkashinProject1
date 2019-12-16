@@ -11,37 +11,37 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static props:Resources.TextSearchByName}" Style="{StaticResource TextBlockText}"/>
+                <TextBlock Text="{x:Static props:Resources.TextSearchByKontragentOrManager}" Width="200" TextWrapping="Wrap" Style="{StaticResource TextBlockText}"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static props:Resources.TextFilterByRole}" Style="{StaticResource TextBlockText}"/>
+                <TextBlock Text="{x:Static props:Resources.TextFilterByTovar}" Style="{StaticResource TextBlockText}"/>
                 <ComboBox Name="CBxSearch" DisplayMemberPath="TovarName" SelectionChanged="CBxSearch_SelectionChanged"/>
             </StackPanel>
         </StackPanel>
         <TextBlock Name="TbNothing" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="Никого не найдено!" Foreground="#E54128"></TextBlock>
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10" RowBackground="White" Name="DataGridGetTovar">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10" RowBackground="White" Name="DataGridPostTovar">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGGetId}" Width="*" Binding="{Binding GetId}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGPostId}" Width="*" Binding="{Binding PostId}"/>
                 <DataGridTextColumn Header="{x:Static props:Resources.DGTovar}" Width="*" Binding="{Binding Tovares.TovarName}"/>
-                <DataGridTextColumn Header="{x:Static props:Resources.DGKontragent}" Width="*" Binding="{Binding Kontragent.Kontragent}"/>
+                <DataGridTextColumn Header="{x:Static props:Resources.DGKontragent}" Width="*" Binding="{Binding Kontragent.KontragentName}"/>
                 <DataGridTextColumn Header="{x:Static props:Resources.DGDateOfSale}" Width="*" Binding="{Binding DateOfPost}"/>
                 <DataGridTextColumn Header="{x:Static props:Resources.DGManager}" Width="*" Binding="{Binding Users.Name}"/>
                 <DataGridTextColumn Header="{x:Static props:Resources.DGCount}" Width="*" Binding="{Binding Count}"/>
                 <DataGridTextColumn Header="{x:Static props:Resources.DGPrice}" Width="*" Binding="{Binding Price}"/>
-                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnEdit}" Width="1.15*">
+                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnEdit}" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Name="BtnEdit" Content="{x:Static props:Resources.BtnEdit}" Width="100" Click="BtnEdit_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnDelete}" Width="1.15*">
+                <DataGridTemplateColumn Header="{x:Static props:Resources.BtnDelete}" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Name="BtnDelete" Content="{x:Static props:Resources.BtnDelete}" Width="100" Click="BtnDelete_Click"/>

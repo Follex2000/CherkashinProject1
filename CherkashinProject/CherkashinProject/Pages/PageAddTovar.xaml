@@ -14,7 +14,7 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextTovarName}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxTovarName" MaxLength="35" TextChanged="TBxTovarName_TextChanged"/>
+                    <TextBox x:Name="TBxTovarName" MaxLength="35" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static props:Resources.TextArticle}" Style="{StaticResource TextBlockText}"/>

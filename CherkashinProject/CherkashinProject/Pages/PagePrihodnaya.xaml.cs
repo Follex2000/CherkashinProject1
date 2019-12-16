@@ -160,6 +160,10 @@ namespace CherkashinProject.Pages
 
         private void CBxTovar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId != 0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
                 AppData.WindowAddEdit.ChangePage(new PageAddTovar(this));
@@ -168,6 +172,10 @@ namespace CherkashinProject.Pages
 
         private void CBxSklad_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId != 0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
 
@@ -199,6 +207,10 @@ namespace CherkashinProject.Pages
 
         private void CBxManager_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (AppData.currentUser.RoleId != 0)
+            {
+                return;
+            }
             if (((ComboBox)sender).SelectedIndex == 0)
             {
                 AppData.WindowAddEdit.ChangePage(new PageAddUser(this));

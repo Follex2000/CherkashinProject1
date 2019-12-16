@@ -322,6 +322,15 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post ID.
+        /// </summary>
+        public static string DGPostId {
+            get {
+                return ResourceManager.GetString("DGPostId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Price.
         /// </summary>
         public static string DGPrice {
@@ -772,6 +781,15 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filter by tovar :.
+        /// </summary>
+        public static string TextFilterByTovar {
+            get {
+                return ResourceManager.GetString("TextFilterByTovar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kontragent :.
         /// </summary>
         public static string TextKontragent {
@@ -853,11 +871,20 @@ namespace CherkashinProject.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search by manager name :.
+        ///   Looks up a localized string similar to Search by manager or kontragent :.
         /// </summary>
-        public static string TextSearchByManagerName {
+        public static string TextSearchByKontragentOrManager {
             get {
-                return ResourceManager.GetString("TextSearchByManagerName", resourceCulture);
+                return ResourceManager.GetString("TextSearchByKontragentOrManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by manager or sklad :.
+        /// </summary>
+        public static string TextSearchByManagerOrSkladName {
+            get {
+                return ResourceManager.GetString("TextSearchByManagerOrSkladName", resourceCulture);
             }
         }
         

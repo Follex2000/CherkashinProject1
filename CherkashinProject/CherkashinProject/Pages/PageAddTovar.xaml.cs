@@ -201,10 +201,6 @@ namespace CherkashinProject.Pages
             }
         }
 
-        private void TBxTovarName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            CheckForInteger.CheckForInt(sender);
-        }
 
         private void TBxArticle_TextChanged(object sender, TextChangedEventArgs e)
         {
